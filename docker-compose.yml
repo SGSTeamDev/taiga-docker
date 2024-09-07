@@ -45,8 +45,6 @@ services:
     networks:
       - taiga
     depends_on:
-      taiga-db:
-        condition: service_healthy
       taiga-events-rabbitmq:
         condition: service_started
       taiga-async-rabbitmq:
@@ -60,8 +58,6 @@ services:
     networks:
       - taiga
     depends_on:
-      taiga-db:
-        condition: service_healthy
       taiga-events-rabbitmq:
         condition: service_started
       taiga-async-rabbitmq:
